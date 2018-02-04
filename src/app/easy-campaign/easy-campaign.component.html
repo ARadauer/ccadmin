@@ -1,0 +1,11 @@
+<p>
+  easy-campaign works! This ist the {{campaign.name}}
+</p>
+
+<li *ngFor="let option of campaign.options" (click)="onSelect(option)">
+  {{option.name}}: {{option.posX}}|{{option.posY}}
+</li>
+
+<div *ngIf="selectedOption">selected option : {{selectedOption.name}}</div>
+
+<app-easy-campaign-detail [campaign]="campaign"></app-easy-campaign-detail>

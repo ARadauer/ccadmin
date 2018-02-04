@@ -1,0 +1,12 @@
+<div class="outer">
+  <div class="inner">
+
+    <div class="wrapper" dnd-droppable (onDropSuccess)="dropSuccess($event)">
+      <div class="marker" dnd-draggable [dragEnabled]="true" [dragData]="option.name"  *ngFor="let option of getCampaigns().options" [ngStyle]="{'left.%': option.posX, 'top.%': option.posY}" >
+        {{option.name}}
+      </div>
+      <img class="car"
+           src="https://static-ms-cc.porscheinformatik.com/media/at/MEDIA/S/MC/KJ72CV08/exteriorfrontXL.jpg?F=9550&P=&M=&APP=MSS"/>
+    </div>
+  </div>
+</div>

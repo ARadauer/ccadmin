@@ -1,0 +1,34 @@
+.outer {
+  width: 100%;
+  position: relative;
+}
+
+.inner {
+  position: relative;
+  background-image: url("https://static.pexels.com/photos/269063/pexels-photo-269063.jpeg");
+  background-position: center;
+  background-size: cover;
+  margin:10px;
+}
+
+.wrapper{
+  position: relative;
+  /*border: 1px solid red;*/
+  display: block;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.car {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+}
+.marker {
+  background-color: blue;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+}
