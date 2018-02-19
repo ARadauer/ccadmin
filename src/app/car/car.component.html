@@ -1,9 +1,11 @@
 <div class="outer">
   <div class="inner">
 
-    <div class="wrapper" dnd-droppable (onDropSuccess)="dropSuccess($event)">
-      <div class="marker" dnd-draggable [dragEnabled]="true" [dragData]="option.name"  *ngFor="let option of getCampaigns().options" [ngStyle]="{'left.%': option.posX, 'top.%': option.posY}" >
+    <div class="wrapper" dnd-droppable (onDropSuccess)="dropSuccess($event)" >
+      <div class="marker" dnd-draggable [dragEnabled]="true" [dragData]="option" (onDragStart)="dragStart($event)" *ngFor="let option of getCampaigns().options" [ngStyle]="{'left.%': option.posX, 'top.%': option.posY}" >
         {{option.name}}
+      </div>
+      <div class="text" [innerHTML]="text.content" dnd-draggable [dragEnabled]="true" [dragData]="text" (onDragStart)="dragStart($event)" *ngFor="let text of getCampaigns().texts" [ngStyle]="{'left.%': text.posX, 'top.%': text.posY}" >
       </div>
       <img class="car"
            src="https://static-ms-cc.porscheinformatik.com/media/at/MEDIA/S/MC/KJ72CV08/exteriorfrontXL.jpg?F=9550&P=&M=&APP=MSS"/>

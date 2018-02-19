@@ -1,7 +1,8 @@
 <div *ngIf="campaign">
 
-  <h2>{{ campaign.name | uppercase }} Details</h2>
-  <div><span>id: </span>{{campaign.id}}</div>
+  <h2>{{ campaign.name | uppercase }} Details {{campaign.id}}</h2>
+
+  <editor [init]="{plugins: 'link'}"></editor>
   <div>
     <label>name:
       <input [(ngModel)]="campaign.name" placeholder="name"/>
